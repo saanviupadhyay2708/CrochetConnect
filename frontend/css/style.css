@@ -782,3 +782,118 @@ body {
   margin-top: 0;            /* Remove space before footer */
   padding-top: 40px;        /* Optional: reduce to match design */
 }
+/* cart page */
+
+.cart-page {
+  padding: 60px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.cart-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.cart-item img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.name-price h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.name-price .price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Quantity (same as product page) */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Subtotal + Checkout */
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.checkout-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  padding: 14px 36px;
+  width: 80% ;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}

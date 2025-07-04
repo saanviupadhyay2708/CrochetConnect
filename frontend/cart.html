@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart - CrochetConnect</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500;700&display=swap&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="cart-page">
+
+    <h1 class="cart-heading">Your Cart</h1>
+
+    <div class="cart-items">
+
+      <!-- Item 1 -->
+      <div class="cart-item">
+        <img src="assets/tang.jpg" alt="Tang Top" />
+        <div class="item-details">
+          <div class="name-price">
+            <h2>TANG TOP</h2>
+            <span class="price">Rs 26000</span>
+          </div>
+          <div class="quantity">
+            <button onclick="decreaseQty(this)">-</button>
+            <input type="number" value="1" />
+            <button onclick="increaseQty(this)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item">
+        <img src="assets/daisy.jpg" alt="Daisy Bag" />
+        <div class="item-details">
+          <div class="name-price">
+            <h2>DAISY BAG</h2>
+            <span class="price">Rs 13500</span>
+          </div>
+          <div class="quantity">
+            <button onclick="decreaseQty(this)">-</button>
+            <input type="number" value="1" />
+            <button onclick="increaseQty(this)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="cart-item">
+        <img src="assets/zest.jpg" alt="Zest Top" />
+        <div class="item-details">
+          <div class="name-price">
+            <h2>ZEST TOP</h2>
+            <span class="price">Rs 27500</span>
+          </div>
+          <div class="quantity">
+            <button onclick="decreaseQty(this)">-</button>
+            <input type="number" value="1" />
+            <button onclick="increaseQty(this)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtotal & Checkout -->
+    <div class="cart-summary">
+      <p class="subtotal-label">Subtotal</p>
+      <p class="subtotal-amount">Rs 67000</p>
+    </div>
+
+    <div class="checkout-btn-container">
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+  </div>
+
+  <script>
+    function increaseQty(btn) {
+      const input = btn.parentElement.querySelector("input");
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function decreaseQty(btn) {
+      const input = btn.parentElement.querySelector("input");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+    }
+  </script>
+</body>
+</html>
